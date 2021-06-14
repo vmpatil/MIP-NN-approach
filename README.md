@@ -22,11 +22,11 @@ Bender's Decomposition.ipynb
 General and Multilayer MIP.ipynb
   In this file, the general, non-decomposed MIP is formulated and implemented.
 
-LD Method-Formulation 1.ipynb
+LD Method-Formulation 1.pdf
   In this file, there is the **first** attempt at reformulating the MIP using Lagrangian Relaxation.
   This reformulation dualizes the 4 constraints that dictate the value of the auxiliary variable, z.
   
-LD Method-Formulation 2.ipynb
+LD Method-Formulation 2.pdf
   In this file, there is the **second** attempt at reformulating the MIP using Lagrangian Relaxation.
   This reformulation uses the artificial variable g, with constraints that maps $ g_{l} $ to $ h_{l-1} $ that are dualized.
   
