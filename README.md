@@ -34,10 +34,17 @@ LD Method-Implementation 1.ipynb
   In this file, there is an implementation of the **first** reformulation the MIP using Lagrangian Relaxation.
   
 LD Method-Implementation 2.ipynb
-  In this file, there is an implementation of the **first** reformulation the MIP using Lagrangian Relaxation.  
+  In this file, there is an implementation of the **second** reformulation the MIP using Lagrangian Relaxation.  
 
 Layerwise MIP.ipynb
   In this file, the MIP is explicitly decomposed layer-by-layer to be solved by brute force.
   There are function that that solve the layers simulataneously and iteratively.
+  
+MNIST Formulation.ipynb
+  In this file, there is a general and Lagrangian relaxed formulation of MIP that can train networks for MNIST.
+  
+MNIST Implementation.ipynb
+  In this file, there is the implementation for the MNIST formulations.
+  IN PROGRESS
 
 ```
