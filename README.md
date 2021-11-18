@@ -5,46 +5,45 @@ Authors: Yonatan Mintz (ymintz@wisc.edu), Vrishabh Patil (vmpatil@wisc.edu)
 
 **STUDY IN PROGRESS**
 
-### Problem Statement ###
+### Abstract ###
 
-  One of the most popular methods of training feed-forward neural networks is by using backpropagation (backprop), a machine learning algorithm that computes the gradient of the loss function with respect to the weights of the network. Backprop has many known limitations, a major one being the vanishing gradient problem, where, in large neural networks, the gradient calculated is diminishingly small and prevents the weights from being updated. Other limitations include finding a local minimum as opposed to a global minimum due to the limitations of stochastic gradient descent. Finally, end-to-end backpropagation requires substantial memory in a naïve implementation, as all the parameters, including activations and gradients at each step, need to fit in a processing unit’s working memory. This project explores an alternative to backprop as a formulation that trains neural using Mixed-Integer Programming to minimize the loss function as constrained by a convex feasible set. This approach should resolve the problems associated with vanishing gradients, as well as assure a global minimum thanks to the convex nature of the problem. Additionally, by constructing the problem as a linear convex optimization problem, we hope to avoid issues associated with stochastic initialization.
+In Progress
 
-### Implementation
+### Code and Experiments
 
-This repo contains scripts and notebooks used to formulate and implement the MIPs used to train the 0-1 Feed Forward Neural Networks.
+This repo contains python scripts used to formulate and implement the MIP and SGD models used to train the Feed Forward Neural Networks.
 
-These are the notebooks/scripts in the working directory:
+These are the scripts in the working directory:
 
 ```
-Bender's Decomposition.ipynb
-  In this file, there is an attempt at decomposing the general MIP using Bender's Decomposition.
+Binary_MIP.py
+  In this file, we have the final code for the Binary Mixed Integer Program model and its corresponding experiments used in the paper.
+  
+Binary_SGD.py
+  In this file, we have the final code for the Binary Stochastic Gradient Descent model and its corresponding experiments used in the paper.
+  
+Greedy_Binary_MIP.py
+  In this file, we have the final code for the Greedy Binary Mixed Integer Program model and its corresponding experiments used in the paper.
 
-General and Multilayer MIP.ipynb
-  In this file, the general, non-decomposed MIP is formulated and implemented.
+Greedy_Binary_MIP+SGD.py
+  In this file, we have the final code for the Binary Stochastic Gradient Descent model using the Greedy Binary MIP results as pre-parameters and its corresponding experiments used in the paper.
 
-LD Method-Formulation 1.pdf
-  In this file, there is the **first** attempt at reformulating the MIP using Lagrangian Relaxation.
-  This reformulation dualizes the 4 constraints that dictate the value of the auxiliary variable, z.
+Greedy_Binary_SGD.py
+  In this file, we have the final code for the Greedy Binary Stochastic Gradient Descent model and its corresponding experiments used in the paper.
   
-LD Method-Formulation 2.pdf
-  In this file, there is the **second** attempt at reformulating the MIP using Lagrangian Relaxation.
-  This reformulation uses the artificial variable g, with constraints that maps $ g_{l} $ to $ h_{l-1} $ that are dualized.
+Greedy_Binary_SGD+SGD.py
+  In this file, we have the final code for the Binary Stochastic Gradient Descent model using the Greedy Binary SGD results as pre-parameters and its corresponding experiments used in the paper.
   
-LD Method-Implementation 1.ipynb
-  In this file, there is an implementation of the **first** reformulation the MIP using Lagrangian Relaxation.
-  
-LD Method-Implementation 2.ipynb
-  In this file, there is an implementation of the **second** reformulation the MIP using Lagrangian Relaxation.  
+Greedy_ReLU_MIP.py
+  In this file, we have the final code for the RelU Mixed Integer Program model and its corresponding experiments used in the paper.
 
-Layerwise MIP.ipynb
-  In this file, the MIP is explicitly decomposed layer-by-layer to be solved by brute force.
-  There are function that that solve the layers simulataneously and iteratively.
+Greedy_ReLU_SGD.py
+  In this file, we have the final code for the Greedy ReLU Stochastic Gradient Descent model and its corresponding experiments used in the paper.
   
-MNIST Formulation.ipynb
-  In this file, there is a general and Lagrangian relaxed formulation of MIP that can train networks for MNIST.
-  
-MNIST Implementation.ipynb
-  In this file, there is the implementation for the MNIST formulations.
-  IN PROGRESS
+Greedy_ReLU_SGD+SGD.py
+  In this file, we have the final code for the ReLU Stochastic Gradient Descent model using the Greedy ReLU SGD results as pre-parameters and its corresponding experiments used in the paper.
 
+ReLU_SGD.py
+  In this file, we have the final code for the ReLU Stochastic Gradient Descent model and its corresponding experiments used in the paper.
+  
 ```
