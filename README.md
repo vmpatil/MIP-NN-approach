@@ -1,7 +1,7 @@
 # MIP-NN-approach
 Mixed-Integer Programming approach to training Neural Networks
 
-Authors: Yonatan Mintz (ymintz@wisc.edu), Vrishabh Patil (vmpatil@wisc.edu)
+Authors: Vrishabh Patil (vmpatil@wisc.edu), Yonatan Mintz (ymintz@wisc.edu)
 
 **STUDY IN PROGRESS**
 
