@@ -7,7 +7,7 @@ Authors: Vrishabh Patil (vmpatil@wisc.edu), Yonatan Mintz (ymintz@wisc.edu)
 
 ### Abstract ###
 
-In Progress
+Artificial Neural Networks (ANNs) are prevalent machine learning models that have been applied across various real world classification tasks. ANNs require a large amount of data to have strong out of sample performance, and many algorithms for training ANN parameters are based on stochastic gradient descent (SGD). However, the SGD ANNs that tend to perform best on prediction tasks are trained in an end to end manner that requires a large number of model parameters and random initialization. This means training ANNs is very time consuming and the resulting models take a lot of memory to deploy. In order to train more parsimonious ANN models, we propose the use of alternative methods from the constrained optimization literature for ANN training and pretraining. In particular, we propose novel mixed integer programming (MIP) formulations for training fully-connected ANNs. Our formulations can account for both binary activation and rectified linear unit (ReLU) activation ANNs, and for the use of a log likelihood loss. We also develop a layer-wise greedy approach, a technique adapted for reducing the number of layers in the ANN, for model pretraining using our MIP formulations. We then present numerical experiments comparing our MIP based methods against existing SGD based approaches and show that we are able to achieve models with competitive out of sample performance that are significantly more parsimonious.
 
 ### Code and Experiments
 
